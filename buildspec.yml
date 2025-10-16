@@ -1,10 +1,10 @@
 version: 0.2
 env:
-  firstsecret:SONAR_SECRET
+  TOKEN: ${{ secrets.SONAR_SECRET }}
 phases:
   install:
     runtime-versions:
       java: latest
   build:
     commands:
-      - mvn verify sonar:sonar -Dsonar.projectKey=cybertest_javaprojectaws -Dsonar.organization=cybertest -Dsonar.host.url=https://sonarcloud.io -Dsonar.token=$SONAR_SECRET 
+      - mvn verify sonar:sonar -Dsonar.projectKey=cybertest_javaprojectaws -Dsonar.organization=cybertest -Dsonar.host.url=https://sonarcloud.io -Dsonar.token=$TOKEN 
