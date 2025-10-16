@@ -1,4 +1,6 @@
 version: 0.2
+env:
+  firstsecret:SONAR_SECRET
 phases:
   install:
     runtime-versions:
